@@ -4,13 +4,13 @@ from sdk.exceptions import CoolsmsException
 
 def sendText():
 
-    api_key = "NCSMPOKT8MGWCNYM"
+    api_key = "NCSMPOKT8MGWCNYM" #악용방지를 위해 현재는 비활성 상태
     api_secret = "X7PPH2PQ7C8ZTGUIMEEM5UB1OZGAFKV3"
 
     params = dict()
     params['type'] = 'sms'
-    params['to'] = '01032904991'
-    params['from'] = '01032904991'
+    params['to'] = '-' #수신자(사용자) 번호 입력 
+    params['from'] = '-' #발신자(개발자 혹은 사용자) 번호 입력
     params['text'] = '도둑이 침입하였습니다!'
 
     cool = Message(api_key, api_secret)
